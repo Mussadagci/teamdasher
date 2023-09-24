@@ -1,0 +1,80 @@
+/* Basic styling */
+
+#driverWorkTable {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#driverWorkTable th, #driverWorkTable td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: center;
+}
+
+#driverWorkTable th {
+    background-color: #f2f2f2;
+}
+
+#driverWorkTable tbody tr:hover {
+    background-color: lightblue;
+}
+
+#driverWorkTable td:last-child:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+#entryForm {
+    margin-bottom: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+#entryForm input, #entryForm button, #entryForm select { /* added select */
+    padding: 5px;
+}
+
+#driverWorkTable button {
+    background-color: #f44336;  /* Red color */
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#driverWorkTable button:hover {
+    background-color: #d32f2f;  /* Darker red on hover */
+}
+
+/* Color coding for drivers */
+
+[data-driver="Driver G14"] {
+    background-color: yellow;
+}
+
+[data-driver="Driver S07"] {
+    background-color: blue;
+    color: white; /* White text for better visibility on blue background */
+}
+
+[data-driver="Driver B02"] {
+    background-color: red;
+    color: white; /* White text for better visibility on red background */
+}
+
+/* Responsiveness for smaller screens */
+
+@media (max-width: 768px) {
+    #entryForm {
+        flex-direction: column; /* Stack the form fields vertically */
+    }
+
+    #driverWorkTable, #driverWorkTable th, #driverWorkTable td {
+        font-size: 0.8em; /* Reduce font size */
+    }
+
+    #driverWorkTable button {
+        padding: 8px 15px; /* Increase button size for better touch targets */
+    }
+}
